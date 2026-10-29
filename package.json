@@ -1,6 +1,6 @@
 {
   "name": "open-hiring-harness",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "private": true,
   "description": "Schema checks for the Open Hiring Harness specification",
   "license": "Apache-2.0",

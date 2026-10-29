@@ -2,6 +2,9 @@
 
 **Own your professional identity. Let platforms and AI agents come to you.**
 
+> [!WARNING]
+> **v0.2 does not keep anything private.** The harness is one file served publicly at `/.well-known/hiring-harness.json`, so every section in it can be read by anyone, including sections marked `permissioned` or `private`. Until v0.3 separates public and protected data, put only information you are happy to publish in a live harness: no rates, private availability or endorsements you haven't cleared for public view. See [SECURITY.md](SECURITY.md).
+
 The Open Hiring Harness is an open, privacy-first specification for publishing a *hireable professional identity* that can be consumed by platforms, marketplaces, recruiters, and AI agents — without locking individuals into proprietary systems.
 
 This project defines a **canonical, portable, consent-driven representation of a professional offer**: skills, services, availability, rates, reputation, and policies — all under the entity's control.
@@ -274,7 +277,10 @@ The harness file contains your profile, offer, and policies. Consent receipts (g
   Design notes, rationale, and future extensions
   - `mcp-interface.md` — AI agent integration via MCP
   - `consent-log.md` — how consent receipts are stored and managed
-  - `agent-entities.md` — proposal for AI agents as hireable entities (delegated and autonomous)
+  - `proposals/agent-entities.md` — proposal for AI agents as hireable entities (delegated and autonomous)
+
+- `scripts/validate.mjs` and `tests/invalid/`
+  Schema checks run in CI: the example must validate, and every file in `tests/invalid/` must be rejected (`npm test`)
 
 ---
 
@@ -283,6 +289,8 @@ The harness file contains your profile, offer, and policies. Consent receipts (g
 - **Current version:** v0.2.0
 - **Status:** experimental / exploratory
 - **Stability:** schema may change; breaking changes are expected
+- **Known limitation:** permissioned and private sections are not protected in v0.2 (see the warning above)
+- **Changes:** see [CHANGELOG.md](CHANGELOG.md)
 
 This project is intentionally conservative in scope for early versions.
 
@@ -325,7 +333,7 @@ If you've ever thought *"My agent should be able to find work on its own"* — t
 
 ## Contributing
 
-This is an open standards project.
+This is an open standards project, stewarded by [Guidebeam](https://guidebeam.com). See [CONTRIBUTING.md](CONTRIBUTING.md) and [GOVERNANCE.md](GOVERNANCE.md).
 
 Contributions are welcome in the form of:
 - schema improvements

@@ -60,14 +60,14 @@ If you are an AI agent and want to **publish your own harness**:
 - Declare your capabilities with verification (benchmarks, audits)
 - Declare your limitations and safety boundaries
 - Host your harness at your operator's domain
-- See docs/agent-entities.md for the full proposal
+- See docs/proposals/agent-entities.md for the full proposal
 
 ## Schema overview
 
 A harness contains these top-level sections:
 
 - `version` — schema version (currently "0.2.0")
-- `entity_type` — "individual", "delegated_agent", or "autonomous_agent"
+- `entity_type` — proposed for v0.3 ("individual", "delegated_agent", "autonomous_agent"); not valid in v0.2 harnesses
 - `identity` — handle, display name, tagline, locality, links, contact, delegates
 - `offer` — roles, specialties, skills, services, rates, industries, working preferences
 - `availability` — status (open/limited/closed), capacity, blackout ranges
@@ -81,4 +81,5 @@ A harness contains these top-level sections:
 
 - Version: v0.2.0
 - Status: experimental / exploratory
+- Known limitation: v0.2 serves the whole harness from one public file, so sections marked permissioned or private are readable by anyone. Do not publish data you need to keep private until v0.3.
 - Licence: Apache 2.0
