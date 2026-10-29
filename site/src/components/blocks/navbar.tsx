@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { Github } from "lucide-react";
 
+import { LogoMark } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { links } from "@/lib/links";
 import { cn } from "@/lib/utils";
@@ -28,12 +29,7 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between gap-4 px-6 py-3">
         <a href="#main" className="flex shrink-0 items-center gap-2">
-          <span
-            aria-hidden="true"
-            className="bg-foreground text-background grid size-6 place-items-center rounded-md font-mono text-[11px] font-semibold"
-          >
-            {"{}"}
-          </span>
+          <LogoMark />
           <span className="font-display text-[15px] font-semibold tracking-tight">
             Open Hiring Harness
           </span>
