@@ -244,6 +244,12 @@ The delegated agent is straightforward — it's a tool within a human's harness.
 - **Can an agent hire another agent?** Yes — using the same consent and requester policy that applies to any requester. Agent-to-agent consent follows the same flow.
 - **How do we prevent a race to the bottom?** By making quality and safety *visible*. The harness doesn't compete on price alone — it exposes capabilities, limitations, safety, and reputation. Cheap-and-unsafe is discoverable too.
 
+### Agents on both sides of hiring
+
+Candidates already use agents that search and apply, and employers and recruiters use agents that source and screen. The harness is meant to be where those agents meet. Both sides publish a harness, and each reveals a little more as the other does: first who they are and whether they're real, then the role and the budget band, and only then rates, availability and contact details. The last step, a conversation or a commitment, is always a human's.
+
+v0.3 lays the foundations: organisations can publish harnesses, agents must say who they act for, and the owner's own agent gets a defined delegate role. The staged, two-way exchange itself is drafted in [docs/proposals/agent-mediated-trust.md](docs/proposals/agent-mediated-trust.md).
+
 ---
 
 ## Hosting & discovery

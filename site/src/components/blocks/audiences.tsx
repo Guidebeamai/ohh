@@ -27,6 +27,10 @@ const groups = [
     icon: Blocks,
     items: [
       {
+        name: "Employers and recruiters",
+        detail: "Publish a harness of your own, so candidates and their agents can check who you are before they share.",
+      },
+      {
         name: "Platforms and recruiting tools",
         detail: "Read a standard profile instead of scraping, and ask for more through one consent flow.",
       },
@@ -49,7 +53,8 @@ export const Audiences = () => {
         <div className="grid items-center gap-3 md:gap-0 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">Who it&apos;s for</h2>
           <p className="text-muted-foreground leading-snug lg:pl-10">
-            v0.2 assumed every harness belonged to a freelancer. v0.3 doesn&apos;t.
+            v0.2 assumed every harness belonged to a freelancer. v0.3 covers job seekers and
+            employees, and the hiring side too.
           </p>
         </div>
 

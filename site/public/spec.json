@@ -68,6 +68,16 @@
       "description": "How consent receipts are stored and managed"
     },
     {
+      "title": "v0.3 proposal: protected access, provenance and profile kinds",
+      "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/proposals/v0.3-access-and-provenance.md",
+      "description": "Draft. Serves non-public sections from a protected endpoint via OAuth (UMA 2.0), adds provenance to every claim, profile kinds, organisation harnesses and a delegate role"
+    },
+    {
+      "title": "Two-way trust between agents",
+      "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/proposals/agent-mediated-trust.md",
+      "description": "Early draft. Agents on both sides of hiring reveal more in stages, each unlocked by what the other side has shown"
+    },
+    {
       "title": "Agent Entities",
       "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/proposals/agent-entities.md",
       "description": "Proposal for AI agents as hireable entities (delegated and autonomous)"

@@ -13,7 +13,7 @@ const resources = [
   { title: "README", description: "Concepts, discovery and design principles", href: links.readme },
   { title: "MCP interface", description: "How AI assistants connect", href: links.mcp },
   { title: "Governance", description: "How changes are decided", href: links.governance },
-  { title: "Contributing", description: "Open an issue, then a proposal", href: links.contributing },
+  { title: "Two-way trust draft", description: "Agents on both sides, revealing more in stages", href: links.agentTrust },
   { title: "llms.txt", description: "A summary for AI tools", href: links.llms },
 ];
 

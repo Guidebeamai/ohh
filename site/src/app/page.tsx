@@ -1,5 +1,6 @@
 import { Background } from "@/components/background";
 import { Access } from "@/components/blocks/access";
+import { Agents } from "@/components/blocks/agents";
 import { Audiences } from "@/components/blocks/audiences";
 import { FAQ } from "@/components/blocks/faq";
 import { Hero } from "@/components/blocks/hero";
@@ -19,6 +20,7 @@ export default function Home() {
       </Background>
       <Provenance />
       <Audiences />
+      <Agents />
       <Background variant="bottom">
         <Roadmap />
         <Principles />

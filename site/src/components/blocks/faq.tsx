@@ -32,9 +32,9 @@ const questions = [
       "No. From v0.3 every claim records where it came from, so a reader can tell a self-declared skill from an attested one. The standard labels the evidence and never turns it into a score or a ranking.",
   },
   {
-    question: "How do AI assistants use a harness?",
+    question: "How do AI agents use a harness?",
     answer:
-      "They read the public file like anyone else. To see a protected section they make a request with a purpose, the same as a recruiting platform. The owner's own assistant can also connect over MCP as one of the owner's apps.",
+      "They read the public file like anyone else. From v0.3, an agent requests a protected section like any other requester, and must say it's an agent and who it acts for. Your own agent can approve routine requests for you, but never private sections. The early draft for v0.5 goes further: agents on both sides reveal more in stages, each unlocked by what the other side has shown.",
   },
   {
     question: "Can students have a harness?",

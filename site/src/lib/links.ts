@@ -6,6 +6,7 @@ export const links = {
   repo,
   proposal: `${repo}/blob/main/docs/proposals/v0.3-access-and-provenance.md`,
   agentProposal: `${repo}/blob/main/docs/proposals/agent-entities.md`,
+  agentTrust: `${repo}/blob/main/docs/proposals/agent-mediated-trust.md`,
   security: `${repo}/blob/main/SECURITY.md`,
   securityReport: `${repo}/security/advisories/new`,
   readme: `${repo}/blob/main/README.md`,

@@ -7,6 +7,8 @@ All notable changes to the Open Hiring Harness are recorded here. The format fol
 - Draft v0.3 proposal: protected access, claim provenance and profile kinds (`docs/proposals/v0.3-access-and-provenance.md`). Students deferred to v0.3.1.
 - The site is rewritten around the v0.3 direction: an interactive example of a harness read by anyone and by an approved recruiter, how access works, provenance, who it's for, a roadmap, questions, light and dark themes, and a mobile layout. It is now a Next.js static export in `site/`, built on the Mainline template (MIT + Commons Clause, see `site/LICENSE`), and the deploy builds it before publishing.
 - `llms.txt` is rewritten to separate what v0.2 does from what v0.3 proposes, and no longer describes agent entity types as supported.
+- The v0.3 proposal adds foundations for hiring between AI agents: organisation harnesses (`employer`, `recruiter`), requester declarations in the purpose claim (`requester_type`, `is_agent`, `on_behalf_of`, `client`) with confirmation through `access.authorized_requesters`, a delegate role with the scope `ohh:grants.manage` that can never release private sections or contact details, separate availability scopes, and a redefined consent receipt.
+- Early draft proposal for two-way trust between agents (`docs/proposals/agent-mediated-trust.md`): staged disclosure in both directions, with conditions, exchanges and rules for agents. Targeted at v0.5.
 
 ## 2026-10-29 — repository clean-up
 

@@ -16,7 +16,7 @@ const stages = [
     state: "In design",
     title: "Protected access, provenance and profile kinds",
     description:
-      "Public and protected parts, access through OAuth, a source on every claim, and room for job seekers and employees.",
+      "Public and protected parts, access through OAuth, a source on every claim, and room for job seekers, employees and employers. Agents must say who they act for.",
     link: { label: "Read the proposal", href: links.proposal },
   },
   {
@@ -34,11 +34,19 @@ const stages = [
       "References and results issued as W3C Verifiable Credentials, building on Open Badges 3.0, so an attested claim can be verified rather than trusted.",
   },
   {
+    version: "v0.5",
+    state: "Early draft",
+    title: "Two-way trust between agents",
+    description:
+      "Agents on both sides reveal more in stages, each unlocked by what the other side has shown. The final step is always a person's.",
+    link: { label: "Read the draft", href: links.agentTrust },
+  },
+  {
     version: "Later",
     state: "Proposal",
     title: "AI agents as hireable entities",
     description:
-      "Agents that work on someone's behalf, or offer services themselves, under the same consent rules.",
+      "Agents that are hired themselves, offering services under the same consent rules, with a named operator accountable for them.",
     link: { label: "Read the proposal", href: links.agentProposal },
   },
 ];
