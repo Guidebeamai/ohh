@@ -73,7 +73,7 @@ export function Footer() {
         </div>
       </nav>
 
-      <div aria-hidden="true" className="text-primary mt-6 w-full select-none md:mt-10">
+      <div aria-hidden="true" className="text-tint mt-6 w-full select-none md:mt-10">
         <svg viewBox="0 0 1600 180" className="w-full" fill="none">
           <defs>
             <linearGradient id="footer-wordmark" x1="0" y1="0" x2="0" y2="1">
