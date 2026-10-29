@@ -1,4 +1,4 @@
-import { ArrowLeftRight, ArrowRight, BadgeCheck, ChevronRight, Globe, Layers } from "lucide-react";
+import { ArrowLeftRight, ArrowRight, ChevronRight, FileText, LockKeyhole, ScanSearch } from "lucide-react";
 
 import { HarnessViewer } from "@/components/blocks/harness-viewer";
 import { DashedLine } from "@/components/dashed-line";
@@ -7,24 +7,24 @@ import { links } from "@/lib/links";
 
 const features = [
   {
-    title: "A profile you host",
-    description: "Your harness lives on your own website. Any agent or platform can read the public part.",
-    icon: Globe,
+    title: "One file, on your own site",
+    description: "Your skills, experience and what you're looking for, in a standard format. Write it once.",
+    icon: FileText,
+  },
+  {
+    title: "Readable by any platform or agent",
+    description: "Job boards, recruiters and AI agents read the public part directly. No re-typing, no scraping.",
+    icon: ScanSearch,
+  },
+  {
+    title: "Private details on your terms",
+    description: "Rates, availability and contact details go only to those you approve, a step at a time.",
+    icon: LockKeyhole,
   },
   {
     title: "Both sides show their hand",
-    description: "Employers and recruiters publish a harness too, so your agent can check who's asking.",
+    description: "Employers publish one too, so you can check who's asking before you share.",
     icon: ArrowLeftRight,
-  },
-  {
-    title: "Shared in stages",
-    description: "Rates, availability and contact details come out only as the other side reveals more.",
-    icon: Layers,
-  },
-  {
-    title: "A source on every claim",
-    description: "Each skill says whether you typed it, a test measured it or someone vouched for it.",
-    icon: BadgeCheck,
   },
 ];
 
@@ -34,31 +34,31 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         <div className="flex-1">
           <a
-            href={links.proposal}
+            href="#agents"
             className="group bg-background/70 hover:bg-background mb-8 inline-flex max-w-full items-center gap-3 rounded-2xl border py-1 pr-3 pl-1 text-sm leading-snug shadow-sm transition-colors sm:rounded-full"
           >
             <span className="bg-primary text-primary-foreground shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium">
-              v0.3 draft
+              New
             </span>
             <span className="min-w-0 py-0.5 sm:truncate">
-              Private sections, verified requesters and a source on every claim
+              Built for AI agents on both sides of hiring
             </span>
             <ChevronRight className="text-muted-foreground size-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
           </a>
 
           <h1 className="text-foreground max-w-160 text-4xl tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Let your AI agent meet theirs
+            A professional profile you own, that AI agents can read
           </h1>
 
           <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-snug md:text-xl">
-            The Open Hiring Harness is an open standard for AI agents on both sides of hiring.
-            Your agent shares your profile a little at a time, and only as the other side shows
-            who they are, what the role is and what it pays. The final step is always yours.
+            The Open Hiring Harness is an open standard for describing your work in one file on
+            your own website. Job platforms, recruiters and AI agents read the public part.
+            Your rates, availability and contact details are shared only with those you approve.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button className="shadow-md" asChild>
-              <a href={links.proposal}>Read the v0.3 proposal</a>
+              <a href="#how-access-works">See how it works</a>
             </Button>
             <Button
               variant="outline"
