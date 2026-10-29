@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, ChevronRight, Globe, KeyRound, LockKeyhole } from "lucide-react";
+import { ArrowLeftRight, ArrowRight, BadgeCheck, ChevronRight, Globe, Layers } from "lucide-react";
 
 import { HarnessViewer } from "@/components/blocks/harness-viewer";
 import { DashedLine } from "@/components/dashed-line";
@@ -7,24 +7,24 @@ import { links } from "@/lib/links";
 
 const features = [
   {
-    title: "A public file you host",
-    description: "Anyone can read the public part at a well-known address on your own domain.",
+    title: "A profile you host",
+    description: "Your harness lives on your own website. Any agent or platform can read the public part.",
     icon: Globe,
   },
   {
-    title: "Sections that stay sealed",
-    description: "Rates, availability and references are released one approved request at a time.",
-    icon: LockKeyhole,
+    title: "Both sides show their hand",
+    description: "Employers and recruiters publish a harness too, so your agent can check who's asking.",
+    icon: ArrowLeftRight,
+  },
+  {
+    title: "Shared in stages",
+    description: "Rates, availability and contact details come out only as the other side reveals more.",
+    icon: Layers,
   },
   {
     title: "A source on every claim",
     description: "Each skill says whether you typed it, a test measured it or someone vouched for it.",
     icon: BadgeCheck,
-  },
-  {
-    title: "Standard OAuth underneath",
-    description: "UMA 2.0 for requests and approvals. No home-made security.",
-    icon: KeyRound,
   },
 ];
 
@@ -47,14 +47,13 @@ export const Hero = () => {
           </a>
 
           <h1 className="text-foreground max-w-160 text-4xl tracking-tight text-balance md:text-5xl lg:text-6xl">
-            One profile every hiring platform can read
+            Let your AI agent meet theirs
           </h1>
 
           <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-snug md:text-xl">
-            The Open Hiring Harness is an open standard for a professional profile you own: a
-            file on your own website that describes your skills, work and rates. Recruiters,
-            hiring platforms and AI assistants read the public part directly. Your rates,
-            availability and references stay sealed until you approve a specific request.
+            The Open Hiring Harness is an open standard for AI agents on both sides of hiring.
+            Your agent shares your profile a little at a time, and only as the other side shows
+            who they are, what the role is and what it pays. The final step is always yours.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

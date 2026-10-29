@@ -10,7 +10,7 @@ type View = "anyone" | "approved";
 
 const VIEWS: { id: View; label: string }[] = [
   { id: "anyone", label: "Anyone" },
-  { id: "approved", label: "Approved recruiter" },
+  { id: "approved", label: "ClientCo's agent" },
 ];
 
 const K = ({ children }: { children: string }) => (
@@ -58,8 +58,8 @@ const NOTES: Record<View, { title: string; body: string; points: string[] }> = {
     ],
   },
   approved: {
-    title: "What ClientCo's recruiter can read",
-    body: "ClientCo asked for Sam's rates, giving a purpose: a three-month pipeline build. Sam approved, so ClientCo can read the rates for 30 days.",
+    title: "What ClientCo's agent can read",
+    body: "ClientCo's agent asked for Sam's rates for a three-month pipeline build. ClientCo's harness confirms the agent acts for it, and Sam's rules share rates with confirmed employers, so it can read them for 30 days.",
     points: [
       "Access covers the rates section only",
       "It expires after 30 days, or sooner if Sam revokes it",
