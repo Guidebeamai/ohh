@@ -278,6 +278,7 @@
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
             {
+              "type": "object",
               "properties": {
                 "data": { "$ref": "#/$defs/ContactPublic" }
               }
@@ -302,6 +303,7 @@
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
             {
+              "type": "object",
               "properties": {
                 "data": { "$ref": "#/$defs/RatesData" }
               }
@@ -330,13 +332,13 @@
         "summary": {
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
-            { "properties": { "data": { "$ref": "#/$defs/AvailabilitySummaryData" } } }
+            { "type": "object", "properties": { "data": { "$ref": "#/$defs/AvailabilitySummaryData" } } }
           ]
         },
         "detail": {
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
-            { "properties": { "data": { "$ref": "#/$defs/AvailabilityDetailData" } } }
+            { "type": "object", "properties": { "data": { "$ref": "#/$defs/AvailabilityDetailData" } } }
           ]
         }
       }
@@ -345,7 +347,7 @@
     "proof": {
       "allOf": [
         { "$ref": "#/$defs/Envelope" },
-        { "properties": { "data": { "$ref": "#/$defs/ProofData" } } }
+        { "type": "object", "properties": { "data": { "$ref": "#/$defs/ProofData" } } }
       ],
       "default": { "visibility": "public", "cache_ttl_minutes": 10080, "scopes_required": [], "data": {} }
     },
@@ -358,13 +360,13 @@
         "redacted": {
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
-            { "properties": { "data": { "$ref": "#/$defs/ReputationRedactedData" } } }
+            { "type": "object", "properties": { "data": { "$ref": "#/$defs/ReputationRedactedData" } } }
           ]
         },
         "full": {
           "allOf": [
             { "$ref": "#/$defs/Envelope" },
-            { "properties": { "data": { "$ref": "#/$defs/ReputationFullData" } } }
+            { "type": "object", "properties": { "data": { "$ref": "#/$defs/ReputationFullData" } } }
           ]
         }
       }
