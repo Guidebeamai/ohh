@@ -68,11 +68,7 @@ export function Footer() {
             <a href={links.securityReport} className="underline underline-offset-4">
               GitHub
             </a>
-            . Site built on{" "}
-            <a href={links.mainline} className="underline underline-offset-4">
-              Mainline
-            </a>{" "}
-            by shadcnblocks.com.
+            .
           </p>
         </div>
       </nav>

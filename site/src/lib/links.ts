@@ -14,11 +14,9 @@ export const links = {
   governance: `${repo}/blob/main/GOVERNANCE.md`,
   contributing: `${repo}/blob/main/CONTRIBUTING.md`,
   license: `${repo}/blob/main/LICENSE`,
-  siteLicense: `${repo}/blob/main/site/LICENSE`,
   issues: `${repo}/issues`,
   schema: `${site}/schema/open-hiring-harness.v0.2.schema.json`,
   example: `${site}/examples/harness.v0.2.example.json`,
   llms: `${site}/llms.txt`,
   guidebeam: "https://guidebeam.com",
-  mainline: "https://github.com/shadcnblocks/mainline-nextjs-template",
 };
