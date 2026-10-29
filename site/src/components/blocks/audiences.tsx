@@ -53,8 +53,8 @@ export const Audiences = () => {
         <div className="grid items-center gap-3 md:gap-0 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">Who it&apos;s for</h2>
           <p className="text-muted-foreground leading-snug lg:pl-10">
-            v0.2 assumed every harness belonged to a freelancer. v0.3 covers job seekers and
-            employees, and the hiring side too.
+            For people at every stage of their working life, and for the organisations and
+            tools that hire them.
           </p>
         </div>
 

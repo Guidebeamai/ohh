@@ -9,7 +9,7 @@ const stages = [
     state: "Current",
     title: "The format and how to find it",
     description:
-      "Schema, discovery at a well-known address, and a consent model on paper. Can't keep sections private.",
+      "The schema, discovery at a well-known address, and the consent model later versions build on.",
   },
   {
     version: "v0.3",

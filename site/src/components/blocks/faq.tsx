@@ -8,12 +8,11 @@ import { links } from "@/lib/links";
 
 const questions = [
   {
-    question: "Can I keep my rates private with v0.2?",
+    question: "Can I keep some sections private today?",
     answer: (
       <>
-        No. v0.2 publishes the whole harness as one public file, so a section marked
-        permissioned or private can still be read by anyone. Publish only what you&apos;d make
-        public until v0.3, which serves protected sections from a separate address.{" "}
+        Protected sections arrive in v0.3. The current release publishes a harness as a
+        single file, so for now include only what you&apos;re happy for anyone to read.{" "}
         <a href={links.security} className="text-foreground underline underline-offset-4">
           Read the details
         </a>

@@ -6,7 +6,7 @@ const resources = [
   { title: "v0.3 proposal", description: "Protected access, provenance and profile kinds", href: links.proposal },
   {
     title: "v0.2 JSON Schema",
-    description: "The current release. It can't keep sections private yet",
+    description: "The current release, draft 2020-12",
     href: links.schema,
   },
   { title: "v0.2 example harness", description: "A complete, valid harness", href: links.example },

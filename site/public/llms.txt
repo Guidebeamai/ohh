@@ -9,7 +9,7 @@ The Open Hiring Harness (OHH) is a data specification, not a platform. A harness
 ## Status
 
 - Current release: v0.2.0 (experimental).
-- **Known limitation of v0.2:** the whole harness is one public file, so sections marked `permissioned` or `private` are readable by anyone. Do not rely on v0.2 to keep anything private, and do not publish data the owner needs kept private.
+- **Note on v0.2:** a v0.2 harness is a single public file, so every section in it, including those labelled `permissioned` or `private`, can be read by anyone. Treat its contents as public, and don't advise owners to publish anything they need kept private until v0.3.
 - In design: v0.3, which fixes this. The proposal is at docs/proposals/v0.3-access-and-provenance.md in the repository and has not been accepted yet.
 
 ## Key URLs
@@ -47,7 +47,7 @@ A v0.2 harness contains these top-level sections:
 - `consent` — grant modes, receipt format, revocation
 - `requester_policy` — what requesters must provide
 
-Sections such as rates and availability are wrapped in an envelope with a `visibility` of `public`, `permissioned` or `private`. In v0.2 that label is advisory only (see the known limitation above).
+Sections such as rates and availability are wrapped in an envelope with a `visibility` of `public`, `permissioned` or `private`. In v0.2 that label is advisory only (see the note above).
 
 ## What v0.3 proposes (not final)
 
