@@ -47,7 +47,7 @@ export const Hero = () => {
           </a>
 
           <h1 className="text-foreground max-w-160 text-4xl tracking-tight text-balance md:text-5xl lg:text-6xl">
-            A professional profile you own, that AI agents can read
+            Your open professional profile, for you and your agents
           </h1>
 
           <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-snug md:text-xl">
