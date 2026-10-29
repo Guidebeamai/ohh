@@ -1,12 +1,16 @@
 # Open Hiring Harness
 
-> An open, privacy-first specification for publishing hireable professional identity — for humans and AI agents.
+> An open standard for a professional profile the person owns. Platforms, recruiters and AI assistants read the public part; private sections are meant to be released only when the owner approves a specific request.
 
 ## What this is
 
-The Open Hiring Harness (OHH) is a data specification — not a platform. It defines a canonical, portable, consent-driven representation of a professional offer: skills, services, availability, rates, reputation, and policies.
+The Open Hiring Harness (OHH) is a data specification, not a platform. A harness describes a person's professional offer and record (identity, roles, skills, rates, availability, proof and reputation) together with the rules for who may read what. It is stewarded by Guidebeam and licensed under Apache 2.0.
 
-Entities (humans or AI agents) publish a harness at a well-known URL. Platforms, marketplaces, recruiters, and AI agents discover and consume it — under the entity's declared rules.
+## Status
+
+- Current release: v0.2.0 (experimental).
+- **Known limitation of v0.2:** the whole harness is one public file, so sections marked `permissioned` or `private` are readable by anyone. Do not rely on v0.2 to keep anything private, and do not publish data the owner needs kept private.
+- In design: v0.3, which fixes this. The proposal is at docs/proposals/v0.3-access-and-provenance.md in the repository and has not been accepted yet.
 
 ## Key URLs
 
@@ -16,10 +20,11 @@ Entities (humans or AI agents) publish a harness at a well-known URL. Platforms,
 - JSON Schema (v0.2): https://openhiringharness.org/schema/open-hiring-harness.v0.2.schema.json
 - Example harness: https://openhiringharness.org/examples/harness.v0.2.example.json
 - Example consent log: https://openhiringharness.org/examples/consent-log.v0.2.example.json
+- v0.3 proposal: https://github.com/Guidebeamai/ohh/blob/main/docs/proposals/v0.3-access-and-provenance.md
 
-## How discovery works
+## How discovery works (v0.2)
 
-A harness is hosted at a well-known URL on the entity's domain:
+A harness is hosted at a well-known URL on the person's domain:
 
     https://yourdomain.com/.well-known/hiring-harness.json
 
@@ -28,58 +33,42 @@ Alternative discovery methods:
 - HTML link tag: `<link rel="hiring-harness" href="...">`
 - HTTP Link header
 
-## Entity types
+## v0.2 schema overview
 
-The harness supports three entity types:
+A v0.2 harness contains these top-level sections:
 
-1. **individual** — a human professional (default)
-2. **delegated_agent** — an AI agent acting on behalf of a human, declared within the human's harness
-3. **autonomous_agent** — an AI agent publishing its own harness, with a named operator
-
-## Core concepts
-
-- **Visibility tiers**: public, permissioned, private
-- **Consent receipts**: scoped, time-bound, purpose-limited, revocable
-- **Reputation**: endorsements and scoped claims, not star ratings
-- **AI-native**: designed for consumption via MCP (Model Context Protocol)
-
-## For AI agents
-
-If you are an AI agent and want to:
-
-- **Discover a professional**: check `/.well-known/hiring-harness.json` on their domain
-- **Read public data**: access the harness directly — public fields have no access requirements
-- **Request permissioned data**: identify yourself, state your purpose, request specific scopes
-- **Understand the schema**: read the JSON Schema at the URL above
-- **Integrate via MCP**: see docs/mcp-interface.md in the repository
-
-If you are an AI agent and want to **publish your own harness**:
-
-- Set `entity_type` to `autonomous_agent`
-- Declare your operator (name, contact, liability)
-- Declare your capabilities with verification (benchmarks, audits)
-- Declare your limitations and safety boundaries
-- Host your harness at your operator's domain
-- See docs/proposals/agent-entities.md for the full proposal
-
-## Schema overview
-
-A harness contains these top-level sections:
-
-- `version` — schema version (currently "0.2.0")
-- `entity_type` — proposed for v0.3 ("individual", "delegated_agent", "autonomous_agent"); not valid in v0.2 harnesses
-- `identity` — handle, display name, tagline, locality, links, contact, delegates
+- `version` — must be "0.2.0"
+- `identity` — handle, display name, tagline, time zone, locality, languages, links, contact
 - `offer` — roles, specialties, skills, services, rates, industries, working preferences
-- `availability` — status (open/limited/closed), capacity, blackout ranges
-- `proof` — case studies, credentials
-- `reputation` — endorsements, claims (redacted and full tiers)
-- `privacy` — visibility defaults, indexing, caching, rate limits, contact protection
+- `availability` — summary and detail
+- `proof` — case studies and credentials
+- `reputation` — endorsements and claims (redacted and full)
+- `privacy` — default visibility, indexing, caching, rate limits, contact protection
 - `consent` — grant modes, receipt format, revocation
-- `requester_policy` — what requesters must provide to access data
+- `requester_policy` — what requesters must provide
 
-## Current status
+Sections such as rates and availability are wrapped in an envelope with a `visibility` of `public`, `permissioned` or `private`. In v0.2 that label is advisory only (see the known limitation above).
 
-- Version: v0.2.0
-- Status: experimental / exploratory
-- Known limitation: v0.2 serves the whole harness from one public file, so sections marked permissioned or private are readable by anyone. Do not publish data you need to keep private until v0.3.
-- Licence: Apache 2.0
+## What v0.3 proposes (not final)
+
+- **Public and protected parts.** The published file holds only public sections. Non-public sections are replaced by an `href` to a protected endpoint.
+- **Access through OAuth.** Third-party requesters use the UMA 2.0 grant: they receive a permission ticket, push their purpose as a claim, and wait while the owner approves. The owner's own apps, such as an AI assistant connected over MCP, use authorization code with PKCE. Requesters are identified by Client ID Metadata Documents, so the owner sees a verified domain.
+- **Provenance on every claim.** Each skill, reference and result says whether it is `self_declared`, `assessed`, `first_party`, `attested` or `inferred`. Consumers must not present `inferred` claims as the owner's own statements.
+- **Profile kinds.** `independent`, `job_seeker` and `employee`. Students and minors are planned for v0.3.1 with stricter rules.
+- **Standard codes** for skills and occupations (O*NET-SOC, ESCO, ANZSCO, OSCA, ISCO-08).
+
+## Roadmap
+
+- v0.2 — current release
+- v0.3 — protected access, provenance, profile kinds (in design)
+- v0.3.1 — students and guardian consent (planned)
+- v0.4 — verifiable claims via W3C Verifiable Credentials and Open Badges 3.0 (planned)
+- Later — AI agents as hireable entities (proposal: docs/proposals/agent-entities.md)
+
+## For AI assistants
+
+- **Read a public harness:** fetch `/.well-known/hiring-harness.json` on the person's domain. Public sections need no authorisation.
+- **Treat v0.2 visibility labels with care:** content in a section marked `permissioned` or `private` was published anyway. Don't surface it as if the owner had approved sharing it.
+- **Understand the schema:** read the JSON Schema at the URL above.
+- **Integrate via MCP:** see docs/mcp-interface.md in the repository.
+- **Agents as hireable entities** (delegated or autonomous) are a proposal only and are not valid in any released schema.

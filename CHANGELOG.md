@@ -2,6 +2,12 @@
 
 All notable changes to the Open Hiring Harness are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## Unreleased
+
+- Draft v0.3 proposal: protected access, claim provenance and profile kinds (`docs/proposals/v0.3-access-and-provenance.md`). Students deferred to v0.3.1.
+- The site is rewritten around the v0.3 direction: an interactive example of a harness read by anyone and by an approved recruiter, how access works, provenance, who it's for, a roadmap, light and dark themes, and a mobile layout.
+- `llms.txt` is rewritten to separate what v0.2 does from what v0.3 proposes, and no longer describes agent entity types as supported.
+
 ## 2026-10-29 — repository clean-up
 
 No change to the harness format: v0.2.0 harnesses that were valid before are still valid.
