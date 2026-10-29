@@ -5,12 +5,12 @@
   "status": "experimental",
   "licence": "Apache-2.0",
   "description": "An open, privacy-first specification for publishing hireable professional identity — for humans and AI agents.",
-  "website": "https://aklodhi98.github.io/ohh/",
-  "repository": "https://github.com/aklodhi98/ohh",
+  "website": "https://guidebeamai.github.io/ohh/",
+  "repository": "https://github.com/Guidebeamai/ohh",
 
   "schema": {
     "version": "0.2.0",
-    "url": "https://raw.githubusercontent.com/aklodhi98/ohh/main/schema/open-hiring-harness.v0.2.schema.json",
+    "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/schema/open-hiring-harness.v0.2.schema.json",
     "format": "JSON Schema (draft 2020-12)"
   },
 
@@ -44,29 +44,29 @@
   "examples": [
     {
       "name": "Individual harness",
-      "url": "https://raw.githubusercontent.com/aklodhi98/ohh/main/examples/harness.v0.2.example.json",
+      "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/examples/harness.v0.2.example.json",
       "entity_type": "individual"
     },
     {
       "name": "Consent log",
-      "url": "https://raw.githubusercontent.com/aklodhi98/ohh/main/examples/consent-log.v0.2.example.json"
+      "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/examples/consent-log.v0.2.example.json"
     }
   ],
 
   "docs": [
     {
       "title": "MCP Interface",
-      "url": "https://github.com/aklodhi98/ohh/blob/main/docs/mcp-interface.md",
+      "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/mcp-interface.md",
       "description": "How AI agents interact with a harness via Model Context Protocol"
     },
     {
       "title": "Consent Log",
-      "url": "https://github.com/aklodhi98/ohh/blob/main/docs/consent-log.md",
+      "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/consent-log.md",
       "description": "How consent receipts are stored and managed"
     },
     {
       "title": "Agent Entities",
-      "url": "https://github.com/aklodhi98/ohh/blob/main/docs/agent-entities.md",
+      "url": "https://github.com/Guidebeamai/ohh/blob/main/docs/agent-entities.md",
       "description": "Proposal for AI agents as hireable entities (delegated and autonomous)"
     }
   ],

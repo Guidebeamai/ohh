@@ -10,12 +10,12 @@ Entities (humans or AI agents) publish a harness at a well-known URL. Platforms,
 
 ## Key URLs
 
-- Specification site: https://aklodhi98.github.io/ohh/
-- GitHub repository: https://github.com/aklodhi98/ohh
-- Machine-readable manifest: https://aklodhi98.github.io/ohh/spec.json
-- JSON Schema (v0.2): https://github.com/aklodhi98/ohh/blob/main/schema/open-hiring-harness.v0.2.schema.json
-- Example harness: https://github.com/aklodhi98/ohh/blob/main/examples/harness.v0.2.example.json
-- Example consent log: https://github.com/aklodhi98/ohh/blob/main/examples/consent-log.v0.2.example.json
+- Specification site: https://guidebeamai.github.io/ohh/
+- GitHub repository: https://github.com/Guidebeamai/ohh
+- Machine-readable manifest: https://guidebeamai.github.io/ohh/spec.json
+- JSON Schema (v0.2): https://github.com/Guidebeamai/ohh/blob/main/schema/open-hiring-harness.v0.2.schema.json
+- Example harness: https://github.com/Guidebeamai/ohh/blob/main/examples/harness.v0.2.example.json
+- Example consent log: https://github.com/Guidebeamai/ohh/blob/main/examples/consent-log.v0.2.example.json
 
 ## How discovery works
 
