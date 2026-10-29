@@ -5,12 +5,12 @@
   "status": "experimental",
   "licence": "Apache-2.0",
   "description": "An open, privacy-first specification for publishing hireable professional identity — for humans and AI agents.",
-  "website": "https://guidebeamai.github.io/ohh/",
+  "website": "https://openhiringharness.org/",
   "repository": "https://github.com/Guidebeamai/ohh",
 
   "schema": {
     "version": "0.2.0",
-    "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/schema/open-hiring-harness.v0.2.schema.json",
+    "url": "https://openhiringharness.org/schema/open-hiring-harness.v0.2.schema.json",
     "format": "JSON Schema (draft 2020-12)"
   },
 
@@ -44,12 +44,12 @@
   "examples": [
     {
       "name": "Individual harness",
-      "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/examples/harness.v0.2.example.json",
+      "url": "https://openhiringharness.org/examples/harness.v0.2.example.json",
       "entity_type": "individual"
     },
     {
       "name": "Consent log",
-      "url": "https://raw.githubusercontent.com/Guidebeamai/ohh/main/examples/consent-log.v0.2.example.json"
+      "url": "https://openhiringharness.org/examples/consent-log.v0.2.example.json"
     }
   ],
 

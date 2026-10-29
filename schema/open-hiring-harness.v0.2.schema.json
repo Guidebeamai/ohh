@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/open-hiring-harness.v0.2.schema.json",
+  "$id": "https://openhiringharness.org/schema/open-hiring-harness.v0.2.schema.json",
   "title": "Open Hiring Harness",
   "type": "object",
   "required": ["version", "identity", "offer", "availability", "privacy", "consent", "requester_policy"],
