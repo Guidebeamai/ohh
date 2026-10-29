@@ -27,10 +27,25 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Build site
+        working-directory: site
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+        run: |
+          npm ci
+          npm run build
+
       - name: Assemble site
         run: |
           mkdir _site
-          cp -R site/. _site/
+          cp -R site/out/. _site/
           cp -R schema examples _site/
 
       - name: Upload artifact

@@ -24,6 +24,29 @@ jobs:
       - name: Validate schema, examples and failing fixtures
         run: npm test
 
+  site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: npm ci
+
+      - name: Typecheck and build the static site
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+        run: |
+          npm run typecheck
+          npm run build
+
   links:
     runs-on: ubuntu-latest
     steps:
@@ -32,5 +55,5 @@ jobs:
       - name: Check links between repository files
         uses: lycheeverse/lychee-action@v2.0.2
         with:
-          args: --offline --no-progress --include-fragments './**/*.md' './site/*.html'
+          args: --offline --no-progress --include-fragments --exclude-path site/node_modules './**/*.md'
           fail: true

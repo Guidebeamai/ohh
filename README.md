@@ -368,6 +368,8 @@ Licensed under Apache 2.0
 
 This specification is free to use, extend, fork, and embed.
 
+The website in `site/` is separate from the specification. It is built on the [Mainline template](https://github.com/shadcnblocks/mainline-nextjs-template) by shadcnblocks.com and is under that template's MIT + Commons Clause licence (`site/LICENSE`), which allows use and publishing but not selling the template itself. Nothing in the specification, schema or examples depends on it.
+
 ---
 
 ## Closing note
