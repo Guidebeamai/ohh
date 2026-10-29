@@ -20,7 +20,5 @@ export const links = {
   example: `${site}/examples/harness.v0.2.example.json`,
   llms: `${site}/llms.txt`,
   guidebeam: "https://guidebeam.com",
-  author: "https://aklodhi.com",
-  article: "https://aklodhi.com/articles/open-hiring-harness",
   mainline: "https://github.com/shadcnblocks/mainline-nextjs-template",
 };

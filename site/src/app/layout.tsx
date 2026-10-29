@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "portable reputation",
     "MCP",
   ],
-  authors: [{ name: "Adnan Lodhi", url: links.author }],
+  authors: [{ name: "Guidebeam", url: links.guidebeam }],
   publisher: "Guidebeam",
   openGraph: {
     title: "Open Hiring Harness",
@@ -71,7 +71,7 @@ const structuredData = {
   license: "https://www.apache.org/licenses/LICENSE-2.0",
   codeRepository: links.repo,
   programmingLanguage: "JSON Schema",
-  author: { "@type": "Person", name: "Adnan Lodhi", url: links.author },
+  author: { "@type": "Organization", name: "Guidebeam", url: links.guidebeam },
   publisher: { "@type": "Organization", name: "Guidebeam", url: links.guidebeam },
 };
 

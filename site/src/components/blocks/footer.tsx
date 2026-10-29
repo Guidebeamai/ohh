@@ -57,13 +57,9 @@ export function Footer() {
             <a href={links.license} className="underline underline-offset-4">
               Apache License 2.0
             </a>{" "}
-            and stewarded by Guidebeam. Created by{" "}
-            <a href={links.author} className="underline underline-offset-4">
-              AK Lodhi
-            </a>
-            ;{" "}
-            <a href={links.article} className="underline underline-offset-4">
-              read the original article
+            and stewarded by{" "}
+            <a href={links.guidebeam} className="underline underline-offset-4">
+              Guidebeam
             </a>
             .
           </p>
