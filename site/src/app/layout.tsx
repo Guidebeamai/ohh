@@ -1,4 +1,4 @@
-import { DM_Sans, Geist_Mono, Inter } from "next/font/google";
+import { Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 
 import type { Metadata } from "next";
 
@@ -8,10 +8,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { links } from "@/lib/links";
 import "@/styles/globals.css";
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-dm-sans",
+  weight: ["500", "600", "700"],
+  variable: "--font-space-grotesk",
 });
 
 const inter = Inter({
@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${inter.variable} ${geistMono.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased">

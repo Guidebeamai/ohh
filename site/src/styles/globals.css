@@ -67,7 +67,7 @@
 }
 
 :root {
-  --display-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --display-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --text-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --mono-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
@@ -271,7 +271,7 @@
     font-feature-settings:
       "ss02" on,
       "ss03" on,
-      "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
+      "ss04" on;
   }
   .font-mono {
     font-family: var(--mono-family);
