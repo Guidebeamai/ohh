@@ -82,7 +82,7 @@ export function Footer() {
       </nav>
 
       <div aria-hidden="true" className="text-primary mt-6 w-full select-none md:mt-10">
-        <svg viewBox="0 0 1600 260" className="w-full" fill="none">
+        <svg viewBox="0 0 1600 180" className="w-full" fill="none">
           <defs>
             <linearGradient id="footer-wordmark" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="currentColor" />
@@ -91,15 +91,15 @@ export function Footer() {
           </defs>
           <text
             x="800"
-            y="250"
+            y="152"
             textAnchor="middle"
             textLength="1580"
             lengthAdjust="spacingAndGlyphs"
             fill="url(#footer-wordmark)"
             className="font-display"
-            style={{ fontSize: 290, fontWeight: 600, letterSpacing: "-0.04em" }}
+            style={{ fontSize: 174, fontWeight: 600, letterSpacing: "-0.04em" }}
           >
-            hiring harness
+            Open Hiring Harness
           </text>
         </svg>
       </div>
